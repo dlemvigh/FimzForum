@@ -1,0 +1,11 @@
+{
+	"name" : "filmz forum",
+	"version" : "0.0.1",
+	"dependencies" : {
+		"bootstrap":"latest",
+		"angular":"latest",
+		"underscore":"latest",
+		"angular-route":"latest",
+		"font-awesome":"latest"
+	}
+}
