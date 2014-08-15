@@ -2,24 +2,51 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
     <title>Having my cake and eat it!</title>
+    <base href="/" />
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="Scripts/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="Scripts/bootstrap/dist/css/bootstrap-theme.css" />
+
+    <!-- javascript libraries -->
     <script src="Scripts/jquery/dist/jquery.js"></script>
     <script src="Scripts/angular/angular.js"></script>
+    <script src="Scripts/angular-route/angular-route.js"></script>
+    <script src="Scripts/jquery/dist/jquery.js"></script>
+    <script src="Scripts/bootstrap/dist/js/bootstrap.js"
+
+    <!-- angular controllers etc. -->
     <script src="Scripts/app/test.js"></script>
     <script src="Scripts/app/angular.js"></script>
+    <script src="Scripts/app/controllers/forum.js"></script>
+    <script src="Scripts/app/controllers/topic.js"></script>
+    <script src="Scripts/app/controllers/thread.js"></script>
+    <script src="Scripts/app/routes.js"></script>
     <script src="Scripts/app/app.js"></script>
 </head>
 <body>
-    <div ng-controller="TestController">
-        {{message}}
-    </div>
-    <div ng-controller="TsController">
-        {{message}}
-    </div>
-    <p>
-        This is a test having a visual studio project using angularJS and typescript... what could possibly go wrong?
-    </p>
-    <p>
-        Also used bower to install dependencies. {{ 2 + 2 }}
-    </p>
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Fimz Forum</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Topic">Topic</a></li>
+                    <li><a href="#Thread">Thread</a></li>
+                </ul>
+
+                <!-- user login -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div ng-view class="container"></div>
+
 </body>
 </html>

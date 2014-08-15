@@ -1,0 +1,18 @@
+﻿	
+[topics]
+movies
+	[threads]
+	casablanca
+		[posts]
+		bogard <3
+		wife beater
+	[threads]
+	lord of the rings
+		peter jackson 4 ever
+		michael bay sux ballz
+[topics]
+fun
+	[threads]
+	chuck norris facts
+		....
+		
