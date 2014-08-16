@@ -5,4 +5,6 @@ angular.module("ForumCtrl", []).controller("ForumController", function ($scope) 
         { id: 1, name: "movies" },
         { id: 2, name: "fun" },
     ];
+
+    
 });

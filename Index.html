@@ -13,15 +13,21 @@
     <script src="Scripts/angular/angular.js"></script>
     <script src="Scripts/angular-route/angular-route.js"></script>
     <script src="Scripts/jquery/dist/jquery.js"></script>
-    <script src="Scripts/bootstrap/dist/js/bootstrap.js"
+    <script src="Scripts/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="Scripts/underscore/underscore.js"></script>
 
-    <!-- angular controllers etc. -->
-    <script src="Scripts/app/test.js"></script>
+    <!-- angular stuff -->
     <script src="Scripts/app/angular.js"></script>
+    <script src="Scripts/app/routes.js"></script>
+    <!--  angular controllers -->
     <script src="Scripts/app/controllers/forum.js"></script>
     <script src="Scripts/app/controllers/topic.js"></script>
     <script src="Scripts/app/controllers/thread.js"></script>
-    <script src="Scripts/app/routes.js"></script>
+    <!-- angular directives -->
+    <script src="Scripts/app/directives/topic.js"></script>
+    <script src="Scripts/app/directives/thread.js"></script>
+    <script src="Scripts/app/directives/post.js"></script>
+
     <script src="Scripts/app/app.js"></script>
 </head>
 <body>
@@ -33,8 +39,8 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#Topic">Topic</a></li>
-                    <li><a href="#Thread">Thread</a></li>
+                    <li><a href="#1">Topic</a></li>
+                    <li><a href="#1/1">Thread</a></li>
                 </ul>
 
                 <!-- user login -->

@@ -19,6 +19,9 @@
   <ItemGroup>
     <Content Include="index.html" />
     <TypeScriptCompile Include="Scripts\app\angular.ts" />
+    <Content Include="Partials\thread-post-list.html" />
+    <Content Include="Partials\topic-thread-list.html" />
+    <Content Include="Partials\forum-topic-list.html" />
     <Content Include="Scripts\angular-route\angular-route.js" />
     <Content Include="Scripts\angular-route\angular-route.min.js" />
     <Content Include="Scripts\angular\angular.js" />
@@ -28,6 +31,9 @@
     <TypeScriptCompile Include="Scripts\app\controllers\forum.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\topic.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\thread.ts" />
+    <TypeScriptCompile Include="Scripts\app\directives\topic.ts" />
+    <TypeScriptCompile Include="Scripts\app\directives\thread.ts" />
+    <TypeScriptCompile Include="Scripts\app\directives\post.ts" />
     <Content Include="Scripts\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="Scripts\bootstrap\dist\css\bootstrap-theme.min.css" />
     <Content Include="Scripts\bootstrap\dist\css\bootstrap.css" />
@@ -45,8 +51,10 @@
     <Content Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <Content Include="Scripts\typings\angularjs\angular.d.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\underscore\underscore.d.ts" />
     <Content Include="Scripts\underscore\underscore.js" />
     <Content Include="TextFile1.txt" />
+    <Content Include="Views\404.html" />
     <Content Include="Views\Demo.html" />
     <Content Include="Views\Forum.html" />
     <Content Include="Views\Thread.html" />

@@ -4,16 +4,16 @@ angular.module("Routes", ["ngRoute"]).config(function ($routeProvider, $location
             templateUrl: 'views/forum.html',
             controller: 'ForumController',
         })
-        .when('/Topic/:topic?', {
+        .when('/Demo', {
+            templateUrl: 'views/demo.html',
+        })
+        .when('/:topic', {
             templateUrl: 'views/topic.html',
             controller: 'TopicController',
         })
-        .when('/Thread/:thread?', {
+        .when('/:topic/:thread', {
             templateUrl: 'views/thread.html',
             controller: 'ThreadController',
-        })
-        .when('/Demo', {
-            templateUrl: 'views/demo.html',
         })
         .otherwise({
             templateUrl: 'views/404.html',

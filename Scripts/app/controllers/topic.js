@@ -1,21 +1,28 @@
 angular.module("TopicCtrl", []).controller("TopicController", function ($scope, $routeParams) {
-    $scope.topic = "tt";
-    $scope.params = $routeParams, $scope.threads = [
+    $scope.topicId = $routeParams.topic;
+
+    $scope.threads = [
         {
             id: 1,
             topicId: 1,
-            name: "Casablanca"
+            title: "Casablanca"
         },
         {
             id: 2,
             topicId: 1,
-            name: "Lord of the Rings"
+            title: "Lord of the Rings"
         },
         {
             id: 3,
             topicId: 2,
-            name: "Chuck Norris facts"
+            title: "Chuck Norris facts"
         }
     ];
+
+    $scope.filtered = function () {
+        return $scope.threads.filter(function (item) {
+            return item.topicId == $scope.topicId;
+        });
+    };
 });
 //# sourceMappingURL=topic.js.map
