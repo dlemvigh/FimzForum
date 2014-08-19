@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.OData.Builder;
+using FimzWebApi.Models;
 
 namespace FimzWebApi
 {
@@ -19,6 +21,13 @@ namespace FimzWebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+            builder.EntitySet<Post>("Post");
+            builder.EntitySet<User>("Users"); 
+            builder.EntitySet<Thread>("Threads"); 
+            builder.EntitySet<Topic>("Topics"); 
+            config.Routes.MapODataRoute("odata", "odata", builder.GetEdmModel());
         }
     }
 }
