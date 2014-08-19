@@ -1,0 +1,22 @@
+﻿App_start
+app
+	controlleres
+		[ngControllers]
+	directives
+		[ngDirectives]
+		[directiveHtml]
+	libs
+		[external libraries]
+	views
+		[ngViews]
+Controllers
+	[WebApiControllers]
+Models
+	[DbModels]
+Scripts
+	typings
+		[typescript definitions]
+Global.asax
+Index.cshtml
+Web.config
+.sln
