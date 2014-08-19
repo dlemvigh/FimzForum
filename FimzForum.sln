@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FimzForum", "FimzForum.csproj", "{3B9141B4-EB8D-4946-815D-42F3F8089A0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FimzWebApi", "FimzWebApi.csproj", "{61A5327D-D3DB-4DC4-91ED-B65D1BC97180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B9141B4-EB8D-4946-815D-42F3F8089A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B9141B4-EB8D-4946-815D-42F3F8089A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B9141B4-EB8D-4946-815D-42F3F8089A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B9141B4-EB8D-4946-815D-42F3F8089A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A5327D-D3DB-4DC4-91ED-B65D1BC97180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A5327D-D3DB-4DC4-91ED-B65D1BC97180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A5327D-D3DB-4DC4-91ED-B65D1BC97180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A5327D-D3DB-4DC4-91ED-B65D1BC97180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

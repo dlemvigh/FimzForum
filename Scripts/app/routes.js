@@ -1,4 +1,4 @@
-﻿angular.module("Routes", ["ngRoute"]).config(function ($routeProvider, $locationProvider) {
+angular.module("Routes", ["ngRoute"]).config(function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/forum.html',
         controller: 'ForumController'

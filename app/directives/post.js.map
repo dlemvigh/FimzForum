@@ -1,0 +1,1 @@
+{"version":3,"file":"post.js","sourceRoot":"","sources":["post.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,CAAC,SAAS,EAAE,EAAE,CAAC,CAAC,SAAS,CAAC,UAAU,EAAE;IAChD,OAAO;QACH,QAAQ,EAAE,GAAG;QACb,WAAW,EAAE,sCAAsC;QACnD,UAAU,EAAE,kBAAkB;KACjC;AACL,CAAC,CAAC"}
