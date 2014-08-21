@@ -6,6 +6,9 @@
 		"angular":"latest",
 		"underscore":"latest",
 		"angular-route":"latest",
-		"font-awesome":"latest"
+		"font-awesome":"latest",
+		"breezejs":"latest",
+		"requirejs":"latest",
+		"q":"1.0.1"
 	}
 }

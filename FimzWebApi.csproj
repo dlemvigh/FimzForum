@@ -59,6 +59,10 @@
       <Private>True</Private>
       <HintPath>..\FimzForum\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -85,7 +89,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.OData">
+    <Reference Include="System.Web.Http.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.WebApi.OData.5.2.0\lib\net45\System.Web.Http.OData.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -113,9 +118,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\FimzForum\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\FimzForum\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
@@ -139,6 +141,7 @@
     <TypeScriptCompile Include="app\directives\topic.ts" />
     <TypeScriptCompile Include="app\directives\thread.ts" />
     <TypeScriptCompile Include="app\directives\post.ts" />
+    <TypeScriptCompile Include="app\data.ts" />
     <Content Include="app\directives\forum-topic-list.html" />
     <Content Include="app\directives\thread-post-list.html" />
     <Content Include="app\directives\topic-thread-list.html" />
@@ -152,8 +155,18 @@
     <Content Include="lib\bootstrap\dist\css\bootstrap.min.css" />
     <Content Include="lib\bootstrap\dist\js\bootstrap.js" />
     <Content Include="lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="lib\breezejs\breeze.base.debug.js" />
+    <Content Include="lib\breezejs\breeze.base.min.js" />
+    <Content Include="lib\breezejs\breeze.debug.js" />
+    <None Include="lib\breezejs\breeze.intellisense.js" />
+    <Content Include="lib\breezejs\breeze.min.js" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="lib\jquery\dist\jquery.js" />
     <Content Include="lib\jquery\dist\jquery.min.js" />
+    <Content Include="lib\q\q.js" />
+    <Content Include="lib\requirejs\require.js" />
     <Content Include="lib\underscore\underscore.js" />
     <Content Include="app\Views\404.html" />
     <Content Include="app\Views\Demo.html" />
@@ -169,7 +182,10 @@
     <Content Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <Content Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <Content Include="Scripts\typings\angularjs\angular.d.ts" />
+    <Content Include="Scripts\typings\breeze\breeze.d.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\q\Q.d.ts" />
+    <Content Include="Scripts\typings\requirejs\require.d.ts" />
     <Content Include="Scripts\typings\underscore\underscore.d.ts" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -197,14 +213,6 @@
     <Compile Include="Migrations\201408192324519_indexes.Designer.cs">
       <DependentUpon>201408192324519_indexes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201408211223507_default created on post.cs" />
-    <Compile Include="Migrations\201408211223507_default created on post.Designer.cs">
-      <DependentUpon>201408211223507_default created on post.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201408211243466_datatime2.cs" />
-    <Compile Include="Migrations\201408211243466_datatime2.Designer.cs">
-      <DependentUpon>201408211243466_datatime2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FimzContext.cs" />
     <Compile Include="Models\Thread.cs" />
@@ -216,6 +224,38 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Index.cshtml" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="lib\font-awesome\less\bordered-pulled.less" />
+    <Content Include="lib\font-awesome\less\core.less" />
+    <Content Include="lib\font-awesome\less\extras.less" />
+    <Content Include="lib\font-awesome\less\fixed-width.less" />
+    <Content Include="lib\font-awesome\less\font-awesome.less" />
+    <Content Include="lib\font-awesome\less\icons.less" />
+    <Content Include="lib\font-awesome\less\larger.less" />
+    <Content Include="lib\font-awesome\less\list.less" />
+    <Content Include="lib\font-awesome\less\mixins.less" />
+    <Content Include="lib\font-awesome\less\path.less" />
+    <Content Include="lib\font-awesome\less\rotated-flipped.less" />
+    <Content Include="lib\font-awesome\less\spinning.less" />
+    <Content Include="lib\font-awesome\less\stacked.less" />
+    <Content Include="lib\font-awesome\less\variables.less" />
+    <Content Include="lib\font-awesome\scss\font-awesome.scss" />
+    <Content Include="lib\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="lib\font-awesome\scss\_core.scss" />
+    <Content Include="lib\font-awesome\scss\_extras.scss" />
+    <Content Include="lib\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="lib\font-awesome\scss\_icons.scss" />
+    <Content Include="lib\font-awesome\scss\_larger.scss" />
+    <Content Include="lib\font-awesome\scss\_list.scss" />
+    <Content Include="lib\font-awesome\scss\_mixins.scss" />
+    <Content Include="lib\font-awesome\scss\_path.scss" />
+    <Content Include="lib\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="lib\font-awesome\scss\_spinning.scss" />
+    <Content Include="lib\font-awesome\scss\_stacked.scss" />
+    <Content Include="lib\font-awesome\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,12 +276,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408192324519_indexes.resx">
       <DependentUpon>201408192324519_indexes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408211223507_default created on post.resx">
-      <DependentUpon>201408211223507_default created on post.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408211243466_datatime2.resx">
-      <DependentUpon>201408211243466_datatime2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
