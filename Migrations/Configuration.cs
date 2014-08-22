@@ -12,7 +12,7 @@ namespace FimzWebApi.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(FimzWebApi.Models.FimzContext context)

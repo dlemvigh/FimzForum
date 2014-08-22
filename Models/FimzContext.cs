@@ -17,6 +17,8 @@ namespace FimzWebApi.Models
     
         public FimzContext() : base("name=FimzContext")
         {
+            //this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<User> Users { get; set; }
