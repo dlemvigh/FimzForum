@@ -1,4 +1,4 @@
-var manager = new breeze.EntityManager('odata');
+var manager = new breeze.EntityManager('api');
 
 var query = new breeze.EntityQuery()
     .from('User');
