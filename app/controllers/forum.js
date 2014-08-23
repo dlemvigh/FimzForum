@@ -1,9 +1,10 @@
-angular.module("ForumCtrl", []).controller("ForumController", function ($scope) {
-    $scope.f = "ff";
-
-    $scope.topics = [
-        { id: 1, name: "movies" },
-        { id: 2, name: "fun" }
-    ];
+﻿app.controller("ForumController", function ($scope, $http) {
+    $scope.topics = [];
+    $scope.getTopics = function () {
+        $http.get("/api/Topic", { cache: true }).success(function (data) {
+            $scope.topics = data;
+        });
+    };
+    $scope.getTopics();
 });
 //# sourceMappingURL=forum.js.map

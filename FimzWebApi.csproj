@@ -142,7 +142,6 @@
     <CodeAnalysisDictionary Include="app\directives\topic.ts" />
     <CodeAnalysisDictionary Include="app\routes.ts" /> -->
     <TypeScriptCompile Include="app\app.ts" />
-    <TypeScriptCompile Include="app\angular.ts" />
     <TypeScriptCompile Include="app\routes.ts" />
     <TypeScriptCompile Include="app\controllers\forum.ts" />
     <TypeScriptCompile Include="app\controllers\topic.ts" />
@@ -150,10 +149,10 @@
     <TypeScriptCompile Include="app\directives\topic.ts" />
     <TypeScriptCompile Include="app\directives\thread.ts" />
     <TypeScriptCompile Include="app\directives\post.ts" />
-    <TypeScriptCompile Include="app\data.ts" />
     <Content Include="app\directives\forum-topic-list.html" />
     <Content Include="app\directives\thread-post-list.html" />
     <Content Include="app\directives\topic-thread-list.html" />
+    <TypeScriptCompile Include="app\services\topicService.ts" />
     <Content Include="lib\angular-route\angular-route.js" />
     <Content Include="lib\angular-route\angular-route.min.js" />
     <Content Include="lib\angular\angular.js" />
@@ -192,6 +191,7 @@
     <Content Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
     <Content Include="Scripts\typings\angularjs\angular.d.ts" />
     <Content Include="Scripts\typings\breeze\breeze.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\fimz\fimz.d.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
     <Content Include="Scripts\typings\q\Q.d.ts" />
     <Content Include="Scripts\typings\requirejs\require.d.ts" />
@@ -204,7 +204,6 @@
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\PostController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Controllers\UserController.cs" />

@@ -1,4 +1,4 @@
-angular.module("ThreadDir", []).directive("threadList", function () {
+app.directive("threadList", function () {
     return {
         restrict: 'E',
         templateUrl: 'app/directives/topic-thread-list.html',

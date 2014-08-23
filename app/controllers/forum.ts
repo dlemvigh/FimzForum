@@ -1,10 +1,12 @@
-angular.module("ForumCtrl", []).controller("ForumController", function ($scope) {
-    $scope.f = "ff";
+app.controller("ForumController", function ($scope, $http : ng.IHttpService) {
 
-    $scope.topics = [
-        { id: 1, name: "movies" },
-        { id: 2, name: "fun" },
-    ];
-
+    $scope.topics = [];
+    $scope.getTopics = function () {
+        $http.get("/api/Topic", { cache: true })
+            .success(function (data: fimz.ITopic[]) {
+                $scope.topics = data;
+            });
+    }
+    $scope.getTopics();
     
 });

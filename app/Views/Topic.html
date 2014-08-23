@@ -1,2 +1,15 @@
 ﻿
 <thread-list></thread-list>
+
+<form role="form" ng-submit="addThread()">
+    <h2>Add thread</h2>
+
+    <div class="form-group">
+        <label for="title">Title
+            <input type="text" name="title" class="form-control" ng-model="title" />
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" ng-disabled="lock">Save</button>
+    <button type="button" class="btn btn-default" ng-disabled="lock" ng-click="clearTitle()">Clear</button>
+</form>
