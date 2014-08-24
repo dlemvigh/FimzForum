@@ -1,4 +1,4 @@
-﻿app.controller("ThreadController", function ($scope, $routeParams, $http) {
+app.controller("ThreadController", function ($scope, $routeParams, $http) {
     $scope.topicId = $routeParams.topic;
     $scope.threadId = $routeParams.thread;
 

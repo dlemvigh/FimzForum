@@ -143,9 +143,9 @@
     <CodeAnalysisDictionary Include="app\routes.ts" /> -->
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\routes.ts" />
-    <TypeScriptCompile Include="app\controllers\forum.ts" />
-    <TypeScriptCompile Include="app\controllers\topic.ts" />
-    <TypeScriptCompile Include="app\controllers\thread.ts" />
+    <TypeScriptCompile Include="app\controllers\forumController.ts" />
+    <TypeScriptCompile Include="app\controllers\topicController.ts" />
+    <TypeScriptCompile Include="app\controllers\threadController.ts" />
     <TypeScriptCompile Include="app\directives\topic.ts" />
     <TypeScriptCompile Include="app\directives\thread.ts" />
     <TypeScriptCompile Include="app\directives\post.ts" />
@@ -153,6 +153,8 @@
     <Content Include="app\directives\thread-post-list.html" />
     <Content Include="app\directives\topic-thread-list.html" />
     <TypeScriptCompile Include="app\services\topicService.ts" />
+    <TypeScriptCompile Include="app\services\threadService.ts" />
+    <TypeScriptCompile Include="app\services\postService.ts" />
     <Content Include="lib\angular-route\angular-route.js" />
     <Content Include="lib\angular-route\angular-route.min.js" />
     <Content Include="lib\angular\angular.js" />

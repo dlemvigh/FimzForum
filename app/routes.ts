@@ -2,20 +2,20 @@ angular.module("Routes", ["ngRoute"]).config(function ($routeProvider, $location
     $routeProvider
         .when('/', {
             templateUrl: 'app/views/forum.html',
-            controller: 'ForumController',
+            controller: 'forumController',
         })
         .when('/Demo', {
             templateUrl: 'app/views/demo.html',
         })
         .when('/:topic', {
             templateUrl: 'app/views/topic.html',
-            controller: 'TopicController',
+            controller: 'topicController',
         })
         .when('/:topic/:thread', {
             templateUrl: 'app/views/thread.html',
-            controller: 'ThreadController',
+            controller: 'threadController',
         })
         .otherwise({
-            templateUrl: 'aap/views/404.html',
+            templateUrl: 'app/views/404.html',
         });
 });

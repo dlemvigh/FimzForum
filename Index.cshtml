@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
-    <title>Having my cake and eat it!</title>
+    <title>Fimz Forum</title>
     <base href="/" />
 
     <!-- stylesheets -->
@@ -40,16 +40,20 @@
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-    @*<script src="lib/underscore/underscore.js"></script>*@
+    <script src="lib/underscore/underscore.js"></script>
     <script src="lib/breezejs/breeze.debug.js"></script>
 
     <!-- angular stuff -->
     <script src="app/app.js"></script>
     <script src="app/routes.js"></script>
+    <!-- angular services -->
+    <script src="app/services/topicService.js"></script>
+    <script src="app/services/threadService.js"></script>
+    <script src="app/services/postService.js"></script>
     <!--  angular controllers -->
-    <script src="app/controllers/forum.js"></script>
-    <script src="app/controllers/topic.js"></script>
-    <script src="app/controllers/thread.js"></script>
+    <script src="app/controllers/forumController.js"></script>
+    <script src="app/controllers/topicController.js"></script>
+    <script src="app/controllers/threadController.js"></script>
     <!-- angular directives -->
     <script src="app/directives/topic.js"></script>
     <script src="app/directives/thread.js"></script>

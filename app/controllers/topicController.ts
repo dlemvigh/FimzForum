@@ -1,15 +1,12 @@
-app.controller("TopicController", function ($scope, $routeParams, $http : ng.IHttpService) {
+app.controller("topicController", ["$scope", "$routeParams", "threadService", function ($scope, $routeParams, threadService : fimz.ThreadService) {
 
     $scope.topicId = $routeParams.topic;
 
-    $scope.threads = []
-    $scope.getThreads = function () {
-        $http.get("/api/Thread?TopicId=" + $scope.topicId, { cache: true })
-            .success((data) => {
-                $scope.threads = data;
-            });
-    };
-    $scope.getThreads();
+    $scope.threads = [];
+    threadService.getThreads($scope.topicId)
+        .success((data) => {
+            $scope.threads = data;
+        });
 
     $scope.title = "";
     $scope.lock = false;
@@ -22,20 +19,17 @@ app.controller("TopicController", function ($scope, $routeParams, $http : ng.IHt
         $scope.lock = true;
 
         var thread: fimz.IThread = {
-            Title : $scope.title,
+            Title: $scope.title,
             TopicId: $scope.topicId,
         };
-        debugger;
 
-        $http.post("/api/Thread", thread)
+        threadService.addThread(thread)
             .success((response: fimz.IThread) => {
-                debugger;
                 $scope.threads.push(response);
                 $scope.clearTitle();
             })
             .finally(() => {
                 $scope.lock = false;
             });
-    }
-
-});
+    };
+}]);
