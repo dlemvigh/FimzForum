@@ -2,3 +2,5 @@ obj/
 bin/
 *.mdf
 *.ldf
+App_Data/FimzContext-20140820002626.mdf
+App_Data/FimzContext-20140820002626_log.ldf
