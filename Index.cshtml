@@ -8,13 +8,26 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css" />
 
-    <!-- facebook scripts -->
+    <!-- social login scripts -->
     @*<script src="//connect.facebook.net/en_US/all.js"></script>*@
+    <script src="https://apis.google.com/js/client:plusone.js"></script>
 </head>
 <body>
 
     <div id="fb-root"></div>
     <script>
+
+        function signinCallback(authResult)
+        {
+            if (authResult['status']['signed_in'])
+            {
+                document.getElementById('signinButton').setAttribute('style', 'display: none');
+            } else
+            {
+                console.log('Sign-in state: ' + authResult['error']);
+            }
+        }
+
         window.fbAsyncInit = function ()
         {
             FB.init({
@@ -108,6 +121,19 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#demo">Demo</a></li>
                     <li><a><fb:login-button autologoutlink="true"></fb:login-button></a></li>
+                    <li>
+                        <a>
+                            <span id="signinButton">
+                              <span
+                                class="g-signin"
+                                data-callback="signinCallback"
+                                data-clientid="306931794864-grls4845udicnlsnilshcl9f2ugsqgpt.apps.googleusercontent.com"
+                                data-cookiepolicy="single_host_origin"
+                                data-scope="profile">
+                              </span>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
